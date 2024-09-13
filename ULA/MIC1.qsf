@@ -36,19 +36,19 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV GX"
+set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY registradores
+set_global_assignment -name TOP_LEVEL_ENTITY BANCO_REGISTRADORES
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:06:37  MARCH 19, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/Documents/usuario/aula-2/ULA_32bits.vwf"
+set_global_assignment -name BDF_FILE registradores_32bits.bdf
 set_global_assignment -name BDF_FILE ULA_32.bdf
 set_global_assignment -name BDF_FILE DECODER2_4.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE DECODER2_4.vwf
@@ -61,9 +61,39 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE ULA_1bit.vwf
 set_global_assignment -name BDF_FILE ULA_8bits.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ULA_8bits.vwf
 set_global_assignment -name SOURCE_FILE ULA_32bits.vwf
-set_global_assignment -name BDF_FILE shifter.bdf
 set_global_assignment -name BDF_FILE registradores.bdf
+set_global_assignment -name MIF_FILE MIC1.mif
+set_global_assignment -name BDF_FILE shifter.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE registradores.vwf
+set_global_assignment -name BDF_FILE MAR.bdf
+set_global_assignment -name BDF_FILE MDR.bdf
+set_global_assignment -name BDF_FILE PC.bdf
+set_global_assignment -name BDF_FILE extensor_mrb.bdf
+set_global_assignment -name BDF_FILE MRB.bdf
+set_global_assignment -name BDF_FILE SP.bdf
+set_global_assignment -name BDF_FILE LV.bdf
+set_global_assignment -name BDF_FILE CPP.bdf
+set_global_assignment -name BDF_FILE TOS.bdf
+set_global_assignment -name BDF_FILE OPC.bdf
+set_global_assignment -name BDF_FILE H.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE registradores_32bits.vwf
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VECTOR_WAVEFORM_FILE shifter.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MAR.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MDR.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE PC.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MRB.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE SP.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE TOS.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE H.vwf
+set_global_assignment -name BDF_FILE DECODER2_4_EN.bdf
+set_global_assignment -name BDF_FILE DECODER4_16_EN.bdf
+set_global_assignment -name BDF_FILE BANCO_REGISTRADORES.bdf
+set_global_assignment -name BDF_FILE LV_initial_address.bdf
+set_global_assignment -name BDF_FILE CPP_initial_address.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE BANCO_REGISTRADORES.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/Desktop/ULA/BANCO_REGISTRADORES.vwf"
