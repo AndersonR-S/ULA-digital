@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mic1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ULA|UNIDADE_CONTROLE:inst|CONTROLSTORE:inst3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ds61.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

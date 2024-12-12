@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 12 18:01:57 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : mic1
+Top-level Entity Name : ULA
+Family : Cyclone II
+Total logic elements : 741
+    Total combinational functions : 502
+    Dedicated logic registers : 309
+Total registers : 309
+Total pins : 288
+Total virtual pins : 0
+Total memory bits : 18,432
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
