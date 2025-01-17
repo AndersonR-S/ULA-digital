@@ -1,0 +1,30 @@
+# do MIC1.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MIC1
+# 
+# Top level modules:
+# 	MIC1
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module computador_mic_vlg_sample_tst
+# -- Compiling module computador_mic_vlg_check_tst
+# -- Compiling module computador_mic_vlg_vec_tst
+# 
+# Top level modules:
+# 	computador_mic_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.computador_mic_vlg_vec_tst 
+# Loading work.computador_mic_vlg_vec_tst
+# ** Error: (vsim-3033) MIC1.vt(5302): Instantiation of 'computador_mic' failed. The design unit was not found.
+# 
+#         Region: /computador_mic_vlg_vec_tst
+#         Searched libraries:
+#             c:/altera/13.0sp1/modelsim_ase/altera/verilog/cycloneii
+#             c:/altera/13.0sp1/modelsim_ase/altera/verilog/altera
+#             c:/altera/13.0sp1/modelsim_ase/altera/verilog/altera_mf
+#             c:/altera/13.0sp1/modelsim_ase/altera/verilog/220model
+#             c:/altera/13.0sp1/modelsim_ase/altera/vhdl/sgate
+#             C:/Users/grego/Desktop/mmm/joaquim/MIC1-main/MIC1/simulation/qsim/work
+# Loading work.computador_mic_vlg_sample_tst
+# Loading work.computador_mic_vlg_check_tst
+# Error loading design

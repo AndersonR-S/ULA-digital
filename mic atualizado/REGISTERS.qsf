@@ -1,0 +1,106 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 16:55:33  September 12, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		REGISTERS_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE AUTO
+set_global_assignment -name TOP_LEVEL_ENTITY BANK_REGS
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:55:33  SEPTEMBER 12, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name VECTOR_WAVEFORM_FILE TOS.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE SP.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE SHIFTER.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE REGISTER32bit.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE REGISTER8bit.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE PC.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE OPC.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MDR.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE mbr_extensor.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MBR.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE MAR.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE LV.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE H.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CPP.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE BANK_REGS_PC_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE BANK_REGS_MDR_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE BANK_REGS_MBR_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE BANK_REGS_MAR_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE BANK_REGS.vwf
+set_global_assignment -name BSF_FILE TOS.bsf
+set_global_assignment -name BSF_FILE SP.bsf
+set_global_assignment -name BSF_FILE SHIFTER.bsf
+set_global_assignment -name BSF_FILE REGISTER32bit.bsf
+set_global_assignment -name BSF_FILE REGISTER8bit.bsf
+set_global_assignment -name BSF_FILE pc_init.bsf
+set_global_assignment -name BSF_FILE PC.bsf
+set_global_assignment -name BSF_FILE OPC.bsf
+set_global_assignment -name BSF_FILE MDR.bsf
+set_global_assignment -name BSF_FILE mbr_extensor.bsf
+set_global_assignment -name BSF_FILE MBR.bsf
+set_global_assignment -name BSF_FILE MAR.bsf
+set_global_assignment -name BSF_FILE LV_initial_address.bsf
+set_global_assignment -name BSF_FILE LV.bsf
+set_global_assignment -name BSF_FILE H.bsf
+set_global_assignment -name BSF_FILE CPP_initial_address.bsf
+set_global_assignment -name BSF_FILE CPP.bsf
+set_global_assignment -name BDF_FILE TOS.bdf
+set_global_assignment -name BDF_FILE SP.bdf
+set_global_assignment -name BDF_FILE SHIFTER.bdf
+set_global_assignment -name BDF_FILE REGISTER32bit.bdf
+set_global_assignment -name BDF_FILE REGISTER8bit.bdf
+set_global_assignment -name BDF_FILE pc_init.bdf
+set_global_assignment -name BDF_FILE PC.bdf
+set_global_assignment -name BDF_FILE OPC.bdf
+set_global_assignment -name BDF_FILE MDR.bdf
+set_global_assignment -name BDF_FILE mbr_extensor.bdf
+set_global_assignment -name BDF_FILE MBR.bdf
+set_global_assignment -name BDF_FILE MAR.bdf
+set_global_assignment -name BDF_FILE LV_initial_address.bdf
+set_global_assignment -name BDF_FILE LV.bdf
+set_global_assignment -name BDF_FILE H.bdf
+set_global_assignment -name BDF_FILE CPP_initial_address.bdf
+set_global_assignment -name BDF_FILE CPP.bdf
+set_global_assignment -name BDF_FILE BANK_REGS.bdf
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/chris/OneDrive/Área de Trabalho/herrera/REGISTERS/BANK_REGS.vwf"
