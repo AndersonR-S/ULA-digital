@@ -1,0 +1,1109 @@
+Analysis & Synthesis report for MC1
+Mon Jan 20 17:15:03 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component|altsyncram_c881:auto_generated
+ 15. Source assignments for RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated
+ 16. Parameter Settings for User Entity Instance: CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: RAM:inst|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jan 20 17:15:03 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; MC1                                             ;
+; Top-level Entity Name              ; Computador_MIC                                  ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 730                                             ;
+;     Total combinational functions  ; 463                                             ;
+;     Dedicated logic registers      ; 317                                             ;
+; Total registers                    ; 317                                             ;
+; Total pins                         ; 184                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 51,200                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; Computador_MIC     ; MC1                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; RAM3.mif                         ; yes             ; User Memory Initialization File    ; C:/Users/Aluno/Desktop/ands/MIC-1-main/RAM3.mif                         ;         ;
+; micro_code.mif                   ; yes             ; User Memory Initialization File    ; C:/Users/Aluno/Desktop/ands/MIC-1-main/micro_code.mif                   ;         ;
+; DECODER2_4.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/DECODER2_4.bdf                   ;         ;
+; FULL_ADDER_1bit.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/FULL_ADDER_1bit.bdf              ;         ;
+; ULA_1bit.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/ULA_1bit.bdf                     ;         ;
+; ULA_8bit.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/ULA_8bit.bdf                     ;         ;
+; ULA_32bit.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/ULA_32bit.bdf                    ;         ;
+; SHIFTER.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/SHIFTER.bdf                      ;         ;
+; REGISTER8bit.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/REGISTER8bit.bdf                 ;         ;
+; REGISTER32bit.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/REGISTER32bit.bdf                ;         ;
+; MAR.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/MAR.bdf                          ;         ;
+; MDR.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/MDR.bdf                          ;         ;
+; PC.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/PC.bdf                           ;         ;
+; MBR.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/MBR.bdf                          ;         ;
+; MBR_EXTENSOR.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/MBR_EXTENSOR.bdf                 ;         ;
+; SP.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/SP.bdf                           ;         ;
+; LV.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/LV.bdf                           ;         ;
+; CPP.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/CPP.bdf                          ;         ;
+; TOS.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/TOS.bdf                          ;         ;
+; OPC.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/OPC.bdf                          ;         ;
+; H.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/H.bdf                            ;         ;
+; BANK.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/BANK.bdf                         ;         ;
+; LV_initial_address.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/LV_initial_address.bdf           ;         ;
+; CPP_initial_address.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/CPP_initial_address.bdf          ;         ;
+; DECODER2_4EN.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/DECODER2_4EN.bdf                 ;         ;
+; DECODER4_16.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/DECODER4_16.bdf                  ;         ;
+; DATAPATH.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/DATAPATH.bdf                     ;         ;
+; mpc_generator.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/mpc_generator.bdf                ;         ;
+; CONTROL_UNIT.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/CONTROL_UNIT.bdf                 ;         ;
+; mc_compiler.vhd                  ; yes             ; User Wizard-Generated File         ; C:/Users/Aluno/Desktop/ands/MIC-1-main/mc_compiler.vhd                  ;         ;
+; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/CPU.bdf                          ;         ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/Aluno/Desktop/ands/MIC-1-main/RAM.vhd                          ;         ;
+; Computador_MIC.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/ands/MIC-1-main/Computador_MIC.bdf               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_c881.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/Desktop/ands/MIC-1-main/db/altsyncram_c881.tdf           ;         ;
+; db/altsyncram_hcb2.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/Desktop/ands/MIC-1-main/db/altsyncram_hcb2.tdf           ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 730   ;
+;                                             ;       ;
+; Total combinational functions               ; 463   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 328   ;
+;     -- 3 input functions                    ; 103   ;
+;     -- <=2 input functions                  ; 32    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 463   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 317   ;
+;     -- Dedicated logic registers            ; 317   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 184   ;
+; Total memory bits                           ; 51200 ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; LOADN ;
+; Maximum fan-out                             ; 304   ;
+; Total fan-out                               ; 3435  ;
+; Average fan-out                             ; 3.41  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Computador_MIC                                 ; 463 (0)           ; 317 (0)      ; 51200       ; 0            ; 0       ; 0         ; 184  ; 0            ; |Computador_MIC                                                                                                                   ; work         ;
+;    |CPU:inst1|                                  ; 463 (0)           ; 317 (0)      ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1                                                                                                         ; work         ;
+;       |CONTROL_UNIT:inst|                       ; 10 (0)            ; 11 (1)       ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|CONTROL_UNIT:inst                                                                                       ; work         ;
+;          |mc_compiler:inst123132|               ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132                                                                ; work         ;
+;             |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component                                ; work         ;
+;                |altsyncram_c881:auto_generated| ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component|altsyncram_c881:auto_generated ; work         ;
+;          |mpc_generator:inst1|                  ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1                                                                   ; work         ;
+;       |DATAPATH:inst13|                         ; 453 (0)           ; 306 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13                                                                                         ; work         ;
+;          |BANK:inst|                            ; 201 (150)         ; 306 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst                                                                               ; work         ;
+;             |CPP:inst5|                         ; 7 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5                                                                     ; work         ;
+;                |REGISTER32bit:inst1|            ; 7 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1                                                 ; work         ;
+;                   |REGISTER8bit:inst20|         ; 2 (2)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst20                             ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst22                             ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst23                             ; work         ;
+;                   |REGISTER8bit:inst|           ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst                               ; work         ;
+;             |H:inst8|                           ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8                                                                       ; work         ;
+;                |REGISTER32bit:inst1|            ; 1 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1                                                   ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|REGISTER8bit:inst20                               ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|REGISTER8bit:inst22                               ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|REGISTER8bit:inst23                               ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|REGISTER8bit:inst                                 ; work         ;
+;             |LV:inst4|                          ; 2 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4                                                                      ; work         ;
+;                |REGISTER32bit:inst1|            ; 2 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4|REGISTER32bit:inst1                                                  ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4|REGISTER32bit:inst1|REGISTER8bit:inst20                              ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4|REGISTER32bit:inst1|REGISTER8bit:inst22                              ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4|REGISTER32bit:inst1|REGISTER8bit:inst23                              ; work         ;
+;                   |REGISTER8bit:inst|           ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4|REGISTER32bit:inst1|REGISTER8bit:inst                                ; work         ;
+;             |MAR:inst|                          ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst                                                                      ; work         ;
+;                |REGISTER32bit:inst1|            ; 1 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1                                                  ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|REGISTER8bit:inst20                              ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|REGISTER8bit:inst22                              ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|REGISTER8bit:inst23                              ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|REGISTER8bit:inst                                ; work         ;
+;             |MBR:inst9|                         ; 2 (0)             ; 17 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9                                                                     ; work         ;
+;                |REGISTER32bit:inst1|            ; 1 (1)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1                                                 ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23                             ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst                               ; work         ;
+;                |REGISTER32bit:inst42|           ; 1 (1)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42                                                ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst                              ; work         ;
+;             |MDR:inst1|                         ; 33 (0)            ; 33 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1                                                                     ; work         ;
+;                |REGISTER32bit:inst1|            ; 33 (10)           ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1                                                 ; work         ;
+;                   |REGISTER8bit:inst20|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|REGISTER8bit:inst20                             ; work         ;
+;                   |REGISTER8bit:inst22|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|REGISTER8bit:inst22                             ; work         ;
+;                   |REGISTER8bit:inst23|         ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|REGISTER8bit:inst23                             ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|REGISTER8bit:inst                               ; work         ;
+;             |OPC:inst7|                         ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7                                                                     ; work         ;
+;                |REGISTER32bit:inst1|            ; 1 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7|REGISTER32bit:inst1                                                 ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7|REGISTER32bit:inst1|REGISTER8bit:inst20                             ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7|REGISTER32bit:inst1|REGISTER8bit:inst22                             ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7|REGISTER32bit:inst1|REGISTER8bit:inst23                             ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7|REGISTER32bit:inst1|REGISTER8bit:inst                               ; work         ;
+;             |PC:inst2|                          ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2                                                                      ; work         ;
+;                |REGISTER32bit:inst1|            ; 1 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1                                                  ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|REGISTER8bit:inst20                              ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|REGISTER8bit:inst22                              ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|REGISTER8bit:inst23                              ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|REGISTER8bit:inst                                ; work         ;
+;             |SP:inst3|                          ; 2 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3                                                                      ; work         ;
+;                |REGISTER32bit:inst1|            ; 2 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3|REGISTER32bit:inst1                                                  ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3|REGISTER32bit:inst1|REGISTER8bit:inst20                              ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3|REGISTER32bit:inst1|REGISTER8bit:inst22                              ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3|REGISTER32bit:inst1|REGISTER8bit:inst23                              ; work         ;
+;                   |REGISTER8bit:inst|           ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3|REGISTER32bit:inst1|REGISTER8bit:inst                                ; work         ;
+;             |TOS:inst6|                         ; 1 (0)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6                                                                     ; work         ;
+;                |REGISTER32bit:inst1|            ; 1 (1)             ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6|REGISTER32bit:inst1                                                 ; work         ;
+;                   |REGISTER8bit:inst20|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6|REGISTER32bit:inst1|REGISTER8bit:inst20                             ; work         ;
+;                   |REGISTER8bit:inst22|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6|REGISTER32bit:inst1|REGISTER8bit:inst22                             ; work         ;
+;                   |REGISTER8bit:inst23|         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6|REGISTER32bit:inst1|REGISTER8bit:inst23                             ; work         ;
+;                   |REGISTER8bit:inst|           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6|REGISTER32bit:inst1|REGISTER8bit:inst                               ; work         ;
+;          |SHIFTER:inst2|                        ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|SHIFTER:inst2                                                                           ; work         ;
+;          |ULA_32bit:inst1|                      ; 205 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1                                                                         ; work         ;
+;             |ULA_8bit:inst2|                    ; 52 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2                                                          ; work         ;
+;                |ULA_1bit:inst10|                ; 8 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst10                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst10|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst11|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst11                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst11|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst12|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst12                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst12|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst13|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst13                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst13|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst14|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst14                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst14|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst2|                 ; 8 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst2                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst2|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst9|                 ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst9                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst9|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst|                  ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst                                            ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst2|ULA_1bit:inst|FULL_ADDER_1bit:inst10                     ; work         ;
+;             |ULA_8bit:inst3|                    ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3                                                          ; work         ;
+;                |ULA_1bit:inst10|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst10                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst10|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst11|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst11                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst11|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst12|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst12                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst12|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst13|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst13                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst13|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst14|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst14                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst14|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst2|                 ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst2                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst2|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst9|                 ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst9                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst9|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst|                  ; 7 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst                                            ; work         ;
+;                   |DECODER2_4:inst9|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst|DECODER2_4:inst9                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst3|ULA_1bit:inst|FULL_ADDER_1bit:inst10                     ; work         ;
+;             |ULA_8bit:inst4|                    ; 50 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4                                                          ; work         ;
+;                |ULA_1bit:inst10|                ; 10 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst10                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst10|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst11|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst11                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst11|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst12|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst12                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst12|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst13|                ; 5 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst13                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst13|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst14|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst14                                          ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst14|FULL_ADDER_1bit:inst10                   ; work         ;
+;                |ULA_1bit:inst2|                 ; 5 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst2                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst2|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst9|                 ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst9                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst9|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst|                  ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst                                            ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst4|ULA_1bit:inst|FULL_ADDER_1bit:inst10                     ; work         ;
+;             |ULA_8bit:inst|                     ; 54 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst                                                           ; work         ;
+;                |ULA_1bit:inst10|                ; 8 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst10                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst10|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst11|                ; 7 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst11                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst11|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst12|                ; 7 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst12                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst12|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst13|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst13                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst13|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst14|                ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst14                                           ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst14|FULL_ADDER_1bit:inst10                    ; work         ;
+;                |ULA_1bit:inst2|                 ; 6 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst2                                            ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst2|FULL_ADDER_1bit:inst10                     ; work         ;
+;                |ULA_1bit:inst9|                 ; 8 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst9                                            ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst9|FULL_ADDER_1bit:inst10                     ; work         ;
+;                |ULA_1bit:inst|                  ; 6 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst                                             ; work         ;
+;                   |FULL_ADDER_1bit:inst10|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst|FULL_ADDER_1bit:inst10                      ; work         ;
+;    |RAM:inst|                                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|RAM:inst                                                                                                          ; work         ;
+;       |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|RAM:inst|altsyncram:altsyncram_component                                                                          ; work         ;
+;          |altsyncram_hcb2:auto_generated|       ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Computador_MIC|RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated                                           ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                          ;
++------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
+; Name                                                                                                                         ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF            ;
++------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
+; CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component|altsyncram_c881:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 512          ; 36           ; --           ; --           ; 18432 ; micro_code.mif ;
+; RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|ALTSYNCRAM                                           ; AUTO ; True Dual Port ; 4096         ; 8            ; 1024         ; 32           ; 32768 ; RAM3.mif       ;
++------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                       ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------+--------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                    ; IP Include File                                        ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------+--------------------------------------------------------+
+; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |Computador_MIC|RAM:inst                                           ; C:/Users/Aluno/Desktop/ands/MIC-1-main/RAM.vhd         ;
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Computador_MIC|CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132 ; C:/Users/Aluno/Desktop/ands/MIC-1-main/mc_compiler.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                      ;
++-----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; Register name                                                                                 ; Reason for Removal                                                                                      ;
++-----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst5  ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst8  ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst12 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst24 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst28 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst20 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst16 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst23|inst   ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst5  ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst8  ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst12 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst24 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst28 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst20 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst16 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst22|inst   ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst5  ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst8  ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst12 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst24 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst28 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst20 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst16 ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst42|REGISTER8bit:inst20|inst   ; Stuck at GND due to stuck port data_in                                                                  ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst28  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst24  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst20  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst16  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst12  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst8   ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst    ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst28  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst24  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst20  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst16  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst12  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst8   ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst5   ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst22|inst    ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst28  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst24  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst20  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst16  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst12  ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst8   ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst5   ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst20|inst    ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst|inst28    ; Merged with CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|REGISTER8bit:inst23|inst5 ;
+; Total Number of Removed Registers = 48                                                        ;                                                                                                         ;
++-----------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 317   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 23    ;
+; Number of registers using Asynchronous Clear ; 304   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                          ;
++---------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                           ; Fan out ;
++---------------------------------------------------------------------------------------------+---------+
+; CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst20|inst5 ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst|inst20  ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst|inst16  ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst|inst24  ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4|REGISTER32bit:inst1|REGISTER8bit:inst|inst24   ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3|REGISTER32bit:inst1|REGISTER8bit:inst|inst24   ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst|inst28  ; 1       ;
+; CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5|REGISTER32bit:inst1|REGISTER8bit:inst20|inst  ; 1       ;
+; Total number of inverted registers = 8                                                      ;         ;
++---------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[31] ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |Computador_MIC|CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[7]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component|altsyncram_c881:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                         ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                          ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Source assignments for RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------+
+; Assignment                      ; Value              ; From ; To                               ;
++---------------------------------+--------------------+------+----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
++---------------------------------+--------------------+------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                ;
++------------------------------------+----------------------+---------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                             ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                                             ;
+; WIDTH_A                            ; 36                   ; Signed Integer                                                      ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                                                      ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                                                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                             ;
+; WIDTH_B                            ; 1                    ; Untyped                                                             ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                             ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                             ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                             ;
+; INIT_FILE                          ; micro_code.mif       ; Untyped                                                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                             ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                             ;
+; CBXI_PARAMETER                     ; altsyncram_c881      ; Untyped                                                             ;
++------------------------------------+----------------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------+
+; Parameter Name                     ; Value                ; Type                      ;
++------------------------------------+----------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                   ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                   ;
+; WIDTH_A                            ; 8                    ; Signed Integer            ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer            ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer            ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                   ;
+; WIDTH_B                            ; 32                   ; Signed Integer            ;
+; WIDTHAD_B                          ; 10                   ; Signed Integer            ;
+; NUMWORDS_B                         ; 1024                 ; Signed Integer            ;
+; INDATA_REG_B                       ; CLOCK0               ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0               ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer            ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                   ;
+; INIT_FILE                          ; RAM3.mif             ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                   ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_hcb2      ; Untyped                   ;
++------------------------------------+----------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                               ;
++-------------------------------------------+------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                              ;
++-------------------------------------------+------------------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                                  ;
+; Entity Instance                           ; CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                                ;
+;     -- WIDTH_A                            ; 36                                                                                 ;
+;     -- NUMWORDS_A                         ; 512                                                                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                       ;
+;     -- WIDTH_B                            ; 1                                                                                  ;
+;     -- NUMWORDS_B                         ; 1                                                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                          ;
+; Entity Instance                           ; RAM:inst|altsyncram:altsyncram_component                                           ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                    ;
+;     -- WIDTH_A                            ; 8                                                                                  ;
+;     -- NUMWORDS_A                         ; 4096                                                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                       ;
+;     -- WIDTH_B                            ; 32                                                                                 ;
+;     -- NUMWORDS_B                         ; 1024                                                                               ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                          ;
++-------------------------------------------+------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jan 20 17:14:59 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MC1 -c MC1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file decoder2_4.bdf
+    Info (12023): Found entity 1: DECODER2_4
+Info (12021): Found 1 design units, including 1 entities, in source file decoder3_8.bdf
+    Info (12023): Found entity 1: DECODER3_8
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder_1bit.bdf
+    Info (12023): Found entity 1: FULL_ADDER_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder_8bit.bdf
+    Info (12023): Found entity 1: FULL_ADDER_8bit
+Info (12021): Found 1 design units, including 1 entities, in source file ula_1bit.bdf
+    Info (12023): Found entity 1: ULA_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file ula_8bit.bdf
+    Info (12023): Found entity 1: ULA_8bit
+Info (12021): Found 1 design units, including 1 entities, in source file ula_32bit.bdf
+    Info (12023): Found entity 1: ULA_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.bdf
+    Info (12023): Found entity 1: SHIFTER
+Info (12021): Found 1 design units, including 1 entities, in source file register8bit.bdf
+    Info (12023): Found entity 1: REGISTER8bit
+Info (12021): Found 1 design units, including 1 entities, in source file register32bit.bdf
+    Info (12023): Found entity 1: REGISTER32bit
+Info (12021): Found 1 design units, including 1 entities, in source file mar.bdf
+    Info (12023): Found entity 1: MAR
+Info (12021): Found 1 design units, including 1 entities, in source file mdr.bdf
+    Info (12023): Found entity 1: MDR
+Info (12021): Found 1 design units, including 1 entities, in source file pc.bdf
+    Info (12023): Found entity 1: PC
+Info (12021): Found 1 design units, including 1 entities, in source file mbr.bdf
+    Info (12023): Found entity 1: MBR
+Info (12021): Found 1 design units, including 1 entities, in source file mbr_extensor.bdf
+    Info (12023): Found entity 1: MBR_EXTENSOR
+Info (12021): Found 1 design units, including 1 entities, in source file sp.bdf
+    Info (12023): Found entity 1: SP
+Info (12021): Found 1 design units, including 1 entities, in source file lv.bdf
+    Info (12023): Found entity 1: LV
+Info (12021): Found 1 design units, including 1 entities, in source file cpp.bdf
+    Info (12023): Found entity 1: CPP
+Info (12021): Found 1 design units, including 1 entities, in source file tos.bdf
+    Info (12023): Found entity 1: TOS
+Info (12021): Found 1 design units, including 1 entities, in source file opc.bdf
+    Info (12023): Found entity 1: OPC
+Info (12021): Found 1 design units, including 1 entities, in source file h.bdf
+    Info (12023): Found entity 1: H
+Info (12021): Found 1 design units, including 1 entities, in source file bank.bdf
+    Info (12023): Found entity 1: BANK
+Info (12021): Found 1 design units, including 1 entities, in source file lv_initial_address.bdf
+    Info (12023): Found entity 1: LV_initial_address
+Info (12021): Found 1 design units, including 1 entities, in source file cpp_initial_address.bdf
+    Info (12023): Found entity 1: CPP_initial_address
+Info (12021): Found 1 design units, including 1 entities, in source file decode3_8_en.bdf
+    Info (12023): Found entity 1: DECODE3_8_EN
+Info (12021): Found 1 design units, including 1 entities, in source file decoder2_4en.bdf
+    Info (12023): Found entity 1: DECODER2_4EN
+Info (12021): Found 1 design units, including 1 entities, in source file decoder4_16.bdf
+    Info (12023): Found entity 1: DECODER4_16
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.bdf
+    Info (12023): Found entity 1: DATAPATH
+Info (12021): Found 1 design units, including 1 entities, in source file mpc_generator.bdf
+    Info (12023): Found entity 1: mpc_generator
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.bdf
+    Info (12023): Found entity 1: CONTROL_UNIT
+Info (12021): Found 2 design units, including 1 entities, in source file mc_compiler.vhd
+    Info (12022): Found design unit 1: mc_compiler-SYN
+    Info (12023): Found entity 1: mc_compiler
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
+    Info (12023): Found entity 1: CPU
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-SYN
+    Info (12023): Found entity 1: RAM
+Info (12021): Found 1 design units, including 1 entities, in source file computador_mic.bdf
+    Info (12023): Found entity 1: Computador_MIC
+Info (12127): Elaborating entity "Computador_MIC" for the top level hierarchy
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:inst1"
+Info (12128): Elaborating entity "CONTROL_UNIT" for hierarchy "CPU:inst1|CONTROL_UNIT:inst"
+Info (12128): Elaborating entity "mc_compiler" for hierarchy "CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "micro_code.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "36"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c881.tdf
+    Info (12023): Found entity 1: altsyncram_c881
+Info (12128): Elaborating entity "altsyncram_c881" for hierarchy "CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component|altsyncram_c881:auto_generated"
+Info (12128): Elaborating entity "mpc_generator" for hierarchy "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1"
+Info (12128): Elaborating entity "DATAPATH" for hierarchy "CPU:inst1|DATAPATH:inst13"
+Info (12128): Elaborating entity "SHIFTER" for hierarchy "CPU:inst1|DATAPATH:inst13|SHIFTER:inst2"
+Info (12128): Elaborating entity "DECODER2_4" for hierarchy "CPU:inst1|DATAPATH:inst13|SHIFTER:inst2|DECODER2_4:inst27"
+Info (12128): Elaborating entity "ULA_32bit" for hierarchy "CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1"
+Info (12128): Elaborating entity "ULA_8bit" for hierarchy "CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst"
+Info (12128): Elaborating entity "ULA_1bit" for hierarchy "CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst14"
+Info (12128): Elaborating entity "FULL_ADDER_1bit" for hierarchy "CPU:inst1|DATAPATH:inst13|ULA_32bit:inst1|ULA_8bit:inst|ULA_1bit:inst14|FULL_ADDER_1bit:inst10"
+Info (12128): Elaborating entity "BANK" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst"
+Info (12128): Elaborating entity "MAR" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst"
+Info (12128): Elaborating entity "REGISTER32bit" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1"
+Info (12128): Elaborating entity "REGISTER8bit" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|REGISTER8bit:inst"
+Info (12128): Elaborating entity "MBR" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9"
+Info (12128): Elaborating entity "MBR_EXTENSOR" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|MBR_EXTENSOR:inst"
+Info (12128): Elaborating entity "DECODER4_16" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|DECODER4_16:inst10"
+Info (12128): Elaborating entity "DECODER2_4EN" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|DECODER4_16:inst10|DECODER2_4EN:inst"
+Info (12128): Elaborating entity "MDR" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1"
+Info (12128): Elaborating entity "H" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8"
+Info (12128): Elaborating entity "OPC" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|OPC:inst7"
+Info (12128): Elaborating entity "TOS" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|TOS:inst6"
+Info (12128): Elaborating entity "CPP" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|CPP:inst5"
+Info (12128): Elaborating entity "CPP_initial_address" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|CPP_initial_address:inst12"
+Info (12128): Elaborating entity "LV" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|LV:inst4"
+Info (12128): Elaborating entity "LV_initial_address" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|LV_initial_address:inst11"
+Info (12128): Elaborating entity "SP" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|SP:inst3"
+Info (12128): Elaborating entity "PC" for hierarchy "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "RAM:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "RAM:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "RAM3.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "numwords_b" = "1024"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "widthad_b" = "10"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hcb2.tdf
+    Info (12023): Found entity 1: altsyncram_hcb2
+Info (12128): Elaborating entity "altsyncram_hcb2" for hierarchy "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[31]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[30]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[29]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[28]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[27]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[26]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[25]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[24]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[23]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[22]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[21]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[20]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[19]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[18]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[17]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[16]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[15]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[14]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[13]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[12]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[11]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[10]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[9]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[8]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[7]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[6]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[5]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[4]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[3]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[2]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[1]" into a selector
+    Warning (13048): Converted tri-state node "CPU:inst1|DATAPATH:inst13|BANK:inst|OUT_B[0]" into a selector
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[31]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[30]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[29]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[28]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[27]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[26]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[25]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[24]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[23]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[22]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[21]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[20]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[19]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[18]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[17]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[16]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[15]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[14]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[13]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[12]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[11]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[10]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[9]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[8]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|H:inst8|REGISTER32bit:inst1|inst5[0]" feeding internal logic into a wire
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[31]" to the node "PC[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[30]" to the node "PC[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[29]" to the node "PC[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[28]" to the node "PC[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[27]" to the node "PC[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[26]" to the node "PC[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[25]" to the node "PC[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[24]" to the node "PC[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[23]" to the node "PC[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[22]" to the node "PC[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[21]" to the node "PC[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[20]" to the node "PC[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[19]" to the node "PC[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[18]" to the node "PC[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[17]" to the node "PC[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[16]" to the node "PC[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[15]" to the node "PC[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[14]" to the node "PC[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[13]" to the node "PC[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[12]" to the node "PC[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[31]" to the node "DATA_MEM_ADDR[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[30]" to the node "DATA_MEM_ADDR[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[29]" to the node "DATA_MEM_ADDR[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[28]" to the node "DATA_MEM_ADDR[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[27]" to the node "DATA_MEM_ADDR[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[26]" to the node "DATA_MEM_ADDR[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[25]" to the node "DATA_MEM_ADDR[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[24]" to the node "DATA_MEM_ADDR[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[23]" to the node "DATA_MEM_ADDR[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[22]" to the node "DATA_MEM_ADDR[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[21]" to the node "DATA_MEM_ADDR[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[20]" to the node "DATA_MEM_ADDR[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[19]" to the node "DATA_MEM_ADDR[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[18]" to the node "DATA_MEM_ADDR[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[17]" to the node "DATA_MEM_ADDR[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[16]" to the node "DATA_MEM_ADDR[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[15]" to the node "DATA_MEM_ADDR[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[14]" to the node "DATA_MEM_ADDR[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[13]" to the node "DATA_MEM_ADDR[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[12]" to the node "DATA_MEM_ADDR[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[11]" to the node "DATA_MEM_ADDR[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[10]" to the node "DATA_MEM_ADDR[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[11]" to the node "PC[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[10]" to the node "PC[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[9]" to the node "PC[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[8]" to the node "PC[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[7]" to the node "PC[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[6]" to the node "PC[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[5]" to the node "PC[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[4]" to the node "PC[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[3]" to the node "PC[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[2]" to the node "PC[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[1]" to the node "PC[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[0]" to the node "PC[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[9]" to the node "DATA_MEM_ADDR[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[8]" to the node "DATA_MEM_ADDR[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[7]" to the node "DATA_MEM_ADDR[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[6]" to the node "DATA_MEM_ADDR[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[5]" to the node "DATA_MEM_ADDR[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[4]" to the node "DATA_MEM_ADDR[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[3]" to the node "DATA_MEM_ADDR[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[2]" to the node "DATA_MEM_ADDR[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[1]" to the node "DATA_MEM_ADDR[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[0]" to the node "DATA_MEM_ADDR[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[31]" to the node "DATA_MEM_OUT[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[30]" to the node "DATA_MEM_OUT[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[29]" to the node "DATA_MEM_OUT[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[28]" to the node "DATA_MEM_OUT[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[27]" to the node "DATA_MEM_OUT[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[26]" to the node "DATA_MEM_OUT[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[25]" to the node "DATA_MEM_OUT[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[24]" to the node "DATA_MEM_OUT[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[23]" to the node "DATA_MEM_OUT[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[22]" to the node "DATA_MEM_OUT[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[21]" to the node "DATA_MEM_OUT[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[20]" to the node "DATA_MEM_OUT[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[19]" to the node "DATA_MEM_OUT[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[18]" to the node "DATA_MEM_OUT[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[17]" to the node "DATA_MEM_OUT[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[16]" to the node "DATA_MEM_OUT[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[15]" to the node "DATA_MEM_OUT[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[14]" to the node "DATA_MEM_OUT[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[13]" to the node "DATA_MEM_OUT[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[12]" to the node "DATA_MEM_OUT[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[11]" to the node "DATA_MEM_OUT[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[10]" to the node "DATA_MEM_OUT[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[9]" to the node "DATA_MEM_OUT[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[8]" to the node "DATA_MEM_OUT[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[7]" to the node "DATA_MEM_OUT[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[6]" to the node "DATA_MEM_OUT[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[5]" to the node "DATA_MEM_OUT[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[4]" to the node "DATA_MEM_OUT[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[3]" to the node "DATA_MEM_OUT[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[2]" to the node "DATA_MEM_OUT[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[1]" to the node "DATA_MEM_OUT[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[0]" to the node "DATA_MEM_OUT[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[7]" to the node "MBR_OUT[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[6]" to the node "MBR_OUT[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[5]" to the node "MBR_OUT[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[4]" to the node "MBR_OUT[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[3]" to the node "MBR_OUT[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[2]" to the node "MBR_OUT[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[1]" to the node "MBR_OUT[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[0]" to the node "MBR_OUT[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[31]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[30]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[29]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[28]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[27]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[26]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[25]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[24]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[23]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[22]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[21]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[20]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[19]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[18]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[17]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[16]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[15]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[14]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[13]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[12]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[11]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[10]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[9]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[8]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[7]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[6]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[5]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[4]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[3]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[2]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[1]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MDR:inst1|REGISTER32bit:inst1|inst6[0]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[11]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[10]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[9]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[8]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[7]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[6]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[5]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[4]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[3]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[2]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[1]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|PC:inst2|REGISTER32bit:inst1|inst6[0]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[9]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[8]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[7]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[6]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[5]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[4]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[3]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[2]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[1]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MAR:inst|REGISTER32bit:inst1|inst6[0]" to the node "RAM:inst|altsyncram:altsyncram_component|altsyncram_hcb2:auto_generated|q_a[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[7]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[6]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[5]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[4]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[3]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[2]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[1]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "CPU:inst1|DATAPATH:inst13|BANK:inst|MBR:inst9|REGISTER32bit:inst1|inst6[0]" to the node "CPU:inst1|CONTROL_UNIT:inst|mpc_generator:inst1|inst2[0]" into an OR gate
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 990 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 182 output pins
+    Info (21061): Implemented 762 logic cells
+    Info (21064): Implemented 44 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 234 warnings
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Mon Jan 20 17:15:03 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

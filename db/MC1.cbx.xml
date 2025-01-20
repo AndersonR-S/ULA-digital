@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MC1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Computador_MIC|CPU:inst1|CONTROL_UNIT:inst|mc_compiler:inst123132|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_c881.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Computador_MIC|RAM:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hcb2.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
